@@ -1,9 +1,6 @@
 # Aiven Test
-`Clicker` is a boilerplate for [Click](https://palletsprojects.com/p/click/) based command line tool.
 
-Create commands in `commands` folder.
-
-# Setup
+## Setup
 Rename `docker-compose.example.yml` to `docker-compose.yml`. Set the following environment variables.
 
 ```yml
@@ -23,7 +20,7 @@ To create database tables and kafka topic run the following command.
 docker-compose run aiven ./manage.py setup
 ```
 
-# Producer
+## Producer
 
 To run the producer
 
@@ -41,7 +38,7 @@ Here are the available options you can pass to producer
   --help                  Show help
 ```
 
-# Consumer
+## Consumer
 
 To run the consumer
 
