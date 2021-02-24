@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  aiven:
+    image: aiven-hw
+    build: .
+    environment:
+      KAFKA_HOST: ""
+      KAFKA_CA_FILE: "certs/kafka-ca.pem"
+      KAFKA_CERT_FILE: "certs/kafka-service.cert"
+      KAFKA_KEY_FILE: "certs/kafka-service.key"
+      KAFKA_TOPIC: "service-status"
+      KAFKA_CLIENT_ID: "client-id"
+      KAFKA_GROUP_ID: "group-id"
+      DATABASE_URL: ""
+    volumes:
+      - type: bind
+        source: .
+        target: /app

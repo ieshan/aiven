@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import importlib
 import os
 
@@ -7,7 +9,7 @@ import click
 class ManageCLI(click.MultiCommand):
 	def list_commands(self, ctx):
 		command_list = []
-		for filename in os.listdir("commands"):
+		for filename in os.listdir("aiven/commands"):
 			if filename.endswith(".py") and filename != "__init__.py":
 				command_list.append(filename[:-3])
 		command_list.sort()
@@ -17,7 +19,7 @@ class ManageCLI(click.MultiCommand):
 		if name == "__init__":
 			return None
 
-		cmd = importlib.import_module("commands." + name).command
+		cmd = importlib.import_module("aiven.commands." + name).command
 
 		if not isinstance(cmd, click.Command):
 			return None

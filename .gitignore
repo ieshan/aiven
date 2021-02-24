@@ -162,3 +162,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Docker
+docker-compose.yml
+
+/certs/**/*
+!/certs/.gitkeep

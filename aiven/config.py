@@ -1,0 +1,13 @@
+import os
+
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+KAFKA_HOST = os.getenv("KAFKA_HOST")
+KAFKA_CA_FILE = os.getenv("KAFKA_CA_FILE")
+KAFKA_CERT_FILE = os.getenv("KAFKA_CERT_FILE")
+KAFKA_KEY_FILE = os.getenv("KAFKA_KEY_FILE")
+
+KAFKA_TOPIC = os.getenv("KAFKA_TOPIC")
+KAFKA_CLIENT_ID = os.getenv("KAFKA_CLIENT_ID")
+KAFKA_GROUP_ID = os.getenv("KAFKA_GROUP_ID")
