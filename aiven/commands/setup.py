@@ -34,7 +34,7 @@ def command():
 		ssl_keyfile=config.KAFKA_KEY_FILE,
 	)
 	topics = [
-		NewTopic(name="example_topic", num_partitions=1, replication_factor=1),
+		NewTopic(name=config.KAFKA_TOPIC, num_partitions=1, replication_factor=1),
 	]
 	try:
 		kafka_admin.create_topics(new_topics=topics, validate_only=False)
